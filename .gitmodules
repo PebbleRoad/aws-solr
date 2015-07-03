@@ -1,0 +1,3 @@
+[submodule "bin/roles/ansible-role-solr"]
+	path = bin/roles/ansible-role-solr
+	url = git@bitbucket.org:ryac/ansible-role-solr.git
