@@ -1,0 +1,7 @@
+---
+- hosts: web
+  sudo: true
+
+  roles:
+    # - { role: common, tags: [ 'common' ] }
+    - { role: ansible-role-solr, tags: [ 'solr' ] }

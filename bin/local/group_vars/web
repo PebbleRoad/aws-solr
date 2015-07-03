@@ -1,0 +1,8 @@
+start_servers: 5
+min_spare_servers: 5
+max_spare_servers: 10
+server_limit: 150
+max_clients: 150
+max_requests_per_child: 0
+
+php_memory_limit: 256M

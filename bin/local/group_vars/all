@@ -1,0 +1,7 @@
+git_branch: develop
+
+app_version: 1
+env: local
+vm: true
+
+server_hostname: localhost
