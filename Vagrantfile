@@ -27,8 +27,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "private_network", ip: "192.168.2.10"
   # config.vm.network "public_network"
 
+  # https://github.com/mitchellh/vagrant/issues/5059
+  # https://github.com/mitchellh/vagrant/blob/master/CHANGELOG.md
+  # If the default insecure keypair is used, Vagrant will automatically replace it with a randomly generated keypair on first `vagrant up`.
+  # setting this to false will continue to use the insecure keypair. should look into doing it the other way, with the randomly generated keypair, if possible..
+  config.ssh.insert_key = false
+
   # Set the share folder for web docroot
-  # config.vm.synced_folder ".", "/var/www", :owner => 'vagrant', :group => 'www-data', :mount_options => ['dmode=775', 'fmode=775']
+  config.vm.synced_folder ".", "/var/www", :owner => 'vagrant', :group => 'www-data', :mount_options => ['dmode=775', 'fmode=775']
 
   # Set the guest host name
   config.vm.host_name = PROJECT_NAME
