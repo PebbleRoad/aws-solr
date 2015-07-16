@@ -1,2 +1,2 @@
 [web]
-54.169.193.108 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/pr-solr.pem
+52.74.211.237 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/aws-solr.pem
