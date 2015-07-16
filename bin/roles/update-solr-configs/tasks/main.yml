@@ -1,0 +1,4 @@
+- name: git pull code
+  git: repo={{ git_repo }} dest={{ remote_path }} force=yes version={{ git_branch }} update=yes accept_hostkey=yes
+  notify:
+    - restart jetty
