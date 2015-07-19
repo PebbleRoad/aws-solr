@@ -1,0 +1,9 @@
+- name: install ssh keys for other users to manage
+  authorized_key: user={{ ansible_ssh_user }} key="{{ lookup('file', 'keys/'+item.key+'.pub') }}" state={{ item.state|default('present') }}
+  with_items: public_keys
+
+- name: add user to solr group
+  user: user={{ ansible_ssh_user }} groups=solr,sudo append=yes
+
+- name: own the solr dir
+  file: path=/opt/solr/solr/ owner={{ ansible_ssh_user }} group=solr mode=2775 state=directory

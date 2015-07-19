@@ -1,0 +1,14 @@
+- name: Update APT package cache
+  apt: update_cache=yes cache_valid_time=3600
+
+- name: common dependencies
+  apt: name={{ item }} state=installed
+  with_items:
+    - build-essential
+    - postfix
+    - wget
+    - zip
+    - curl
+    - openssl
+    - git
+  tags: dependencies

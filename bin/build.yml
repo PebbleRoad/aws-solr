@@ -3,5 +3,6 @@
   sudo: true
 
   roles:
-    # - { role: common, tags: [ 'common' ] }
+    - { role: common, tags: [ 'common' ] }
+    - { role: user, tags: [ 'user' ] }
     - { role: ansible-role-solr, tags: [ 'solr' ] }
