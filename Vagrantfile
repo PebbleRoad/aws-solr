@@ -34,7 +34,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.ssh.insert_key = false
 
   # Set the share folder for web docroot
-  config.vm.synced_folder "./solr/mom", "/opt/solr/solr/mom", :owner => 'solr', :group => 'solr', :mount_options => ['dmode=775', 'fmode=775']
+  config.vm.synced_folder "./solr", "/opt/solr/solr", :owner => 'solr', :group => 'solr', :mount_options => ['dmode=775', 'fmode=775']
 
   # Set the guest host name
   config.vm.host_name = PROJECT_NAME
