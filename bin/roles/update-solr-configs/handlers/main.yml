@@ -1,3 +1,0 @@
-- name: restart jetty
-  command: /etc/init.d/jetty restart
-  sudo: true

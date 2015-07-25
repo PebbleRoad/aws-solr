@@ -1,6 +1,0 @@
----
-- hosts: web
-  sudo: true
-
-  roles:
-    - { role: update-solr-configs, tags: [ 'update-solr' ] }
